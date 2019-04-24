@@ -1,0 +1,20 @@
+.about {
+ 	background: #00b9b9;
+ 	color: #fff;
+ 	padding: 20px 0;
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&__title {
+		font: 700 90px/100px $font;
+	}
+
+	&__desc {
+		font: 300 17px/27px $font;
+	}
+}
+

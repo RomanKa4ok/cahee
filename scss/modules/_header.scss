@@ -1,0 +1,99 @@
+.header {
+	background: url('../images/bg.jpg')no-repeat top center,#f9f8fb;
+	
+	min-height: 1000px;
+	display: flex;
+
+
+		&__logo {
+		font: 50px/125px $logo-text;
+		text-decoration: none;
+		color: $gray;
+			&:hover {
+				color: #ff6033;
+			}
+		}
+
+}
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+}
+
+.nav {
+	float:right;
+	margin-top: 60px;
+}
+
+.menu {
+display: flex;
+	&__item {
+		margin-left: 40px;
+	}
+	&__link {
+		font:700 16px/25px $font;
+		text-decoration: none;
+		color:$gray;
+		position: relative;
+		&::before {
+			content: '';
+			width: 0%;
+			height: 3px;
+			background: #fff;
+			@include pos($t: -10px, $l: 0);
+
+			
+		}
+
+	}
+}
+
+.menu__link:hover::before {
+	width: 100%;
+	transition: ease-in .3s;
+	background: #ff6033;
+}
+
+.freshlife 
+{
+	display: flex;
+	flex-direction: column;
+	min-height: 80%;
+	justify-content: center;
+	color: $gray;
+	position: relative;
+	
+
+	&__scroll {
+	width: 30px;
+	height: 45px;
+	@include pos($b: 5px,$l: 50%);
+	cursor: pointer;
+	
+
+	}
+	&__title {
+	font:800 60px/60px $font;
+	margin-bottom: 20px;
+	}
+	&__desc {
+	width: 370px; 
+	font: 300 17px/27px $font;
+	margin-bottom: 25px;
+	}
+	&__button {
+	width: 200px;
+	height: 55px;
+	font: 300 20px/27px $font;
+	background:#ff6033;
+	color: #fff;
+	cursor: pointer;
+	border: 1px solid transparent;
+	box-shadow: 0 2px 5px gray;
+		&:hover {
+		background: #fff;
+		color: #ff6033;
+		border: 1px solid #ff6033;
+		}
+	}
+}
